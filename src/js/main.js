@@ -4,8 +4,9 @@ import 'nodelist-foreach-polyfill';
 // import form from './modules/form';
 // import slider from './modules/slider';
 import menu from './modules/menu';
+import menuBurger from './modules/menuBurger';
 
 'use strict';
 
 menu();
-// menuBurger();
+menuBurger('.menu', '.menu__sublink', '.hamburger', true);

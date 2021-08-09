@@ -1,7 +1,7 @@
 const menu = () => {
 	let menuLink = document.querySelectorAll('.menu__link');
 	let menuList = document.querySelectorAll('.menu__sublist');
-	let menulink = document.querySelectorAll('.menu__sublink');
+	// let menuSublink = document.querySelectorAll('.menu__sublink');
 
 	const isMobile = {
 		Android: function () {
@@ -40,16 +40,11 @@ const menu = () => {
 					e.preventDefault();
 				}
 				menuList.forEach(list => {
-					if (list !== menuList[index])
-					list.classList.remove('active');
+					if (list !== menuList[index]) {
+						list.classList.remove('active');
+					}
 				});
 				menuList[index].classList.toggle('active');
-			});
-
-			menulink.forEach(item => {
-				item.addEventListener('click', () => {
-					menuList[index].classList.remove('active');
-				});
 			});
 		}
 	} else {
@@ -58,28 +53,20 @@ const menu = () => {
 		for (let index = 0; index < menuLink.length; index++) {
 			let item = menuLink[index];
 			item.addEventListener('keydown', function(e) {
-				if (e.code === 'Enter' || e.code === 'NumpadEnter') {
+				if (e.code === 'Enter' || e.code === 'NumpadEnter' || e.code === 'Space') {
 					let target = e.target
 					if (target) {
 						e.preventDefault();
 					}
 					menuList.forEach(list => {
-						if (list !== menuList[index])
-						list.classList.remove('active');
+						if (list !== menuList[index]) {
+							list.classList.remove('active');
+						}
 					});
 					menuList[index].classList.toggle('active');
 				}
 
 			});
-
-			menulink.forEach(item => {
-				item.addEventListener('keydown', (e) => {
-					if (e.code === 'Enter' || e.code === 'NumpadEnter') {
-						menuList[index].classList.remove('active');
-					}
-				});
-			});
-			
 		}
 	}
 };
