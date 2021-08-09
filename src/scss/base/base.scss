@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Circe', sans-serif;
+    color: #333;
+    background-color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    &.scroll-lock {
+        overflow: hidden;
+    }
+}
+
+ul, ol, li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+    color:#333;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    outline: none;
+}
+textarea {
+	resize: none;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+
+a:focus,
+button:focus,
+select:focus {
+    outline: 2px dotted $main-color;
+}

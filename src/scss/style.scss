@@ -1,0 +1,14 @@
+@import 'base/variables';
+@import 'base/mixins.scss';
+@import 'base/fonts.scss';
+@import 'base/normalize.scss';
+@import 'base/base.scss';
+@import 'base/container.scss';
+
+//============libs============
+// @import '../../node_modules/swiper/swiper-bundle.css';
+// @import 'base/swiper-bundle.scss';
+
+//============blocks==========
+@import 'blocks/header.scss';
+@import 'blocks/buttons.scss';
