@@ -11,6 +11,11 @@
 </head>
 
 <body>
+	<button class="pulse-button">
+		<span class="pulse-button__icon"></span>
+		<span class="pulse-button__rings"></span>
+		<span class="pulse-button__rings"></span>
+	</button>
 	<header id="menu" class="header">
 		<div class="header__container container">
 			<div class="header__wrapper">
@@ -75,10 +80,10 @@
 			</div>
 			<div class="promo__body">
 				<div class="promo__slider">
-					<!-- <div class="promo__img">
+					<div class="promo__img fade">
 						<img src="img/promo/main-1.png" alt="мужчина с картиной">
-					</div> -->
-					<div class="promo__img">
+					</div>
+					<div class="promo__img fade">
 						<img src="img/promo/main-2.png" alt="мужчина с картиной">
 					</div>
 				</div>
@@ -101,8 +106,94 @@
 			
 		</div>
 	</section>
-	<div class="h"></div>
-
+	<section class="design">
+		<div class="design__container container">
+			<div class="design__img">
+				<img src="img/design/design.png" alt="портрет из фото">
+			</div>
+			<div class="design__descr">
+				<p class="design__subtitle subtitle">Просто отправьте фото и</p>
+				<h2 class="design__title title">Мы пришлем вам дизайн бесплатно в течение 1 часа!</h2>
+				<button class="design__btn btn">Заказать дизайн портрета</button>
+			</div>
+		</div>
+		<div class="design__palette"></div>
+	</section>
+	<section class="style" id="styles">
+		<div class="style__container container">
+			<p class="style__subtitle subtitle subtitle_centre">Портрет на холсте</p>
+			<h2 class="style__title title title_centre">Популярные стили рисунка</h2>
+			<div class="style__wrapper">
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-1.jpg" alt="картина">
+					</div>
+					<p class="style__descr">Маслом</p>
+				</div>
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-2.jpg" alt="картина">
+					</div>
+					<p class="style__descr">Акварелью</p>
+				</div>
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-3.jpg" alt="картина">
+					</div>
+					<p class="style__descr">Карандашом</p>
+				</div>
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-4.jpg" alt="картина">
+					</div>
+					<p class="style__descr">Ручкой</p>
+				</div>
+			</div>
+			<div class="style__hidden show">
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-5.jpg" alt="картина">
+					</div>
+					<p class="style__descr">Пастелью</p>
+				</div>
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-6.jpg" alt="картина">
+					</div>
+					<p class="style__descr">Поп-арт</p>
+				</div>
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-7.png" alt="картина">
+					</div>
+					<p class="style__descr">Фотомозаика</p>
+				</div>
+				<div class="style__item">
+					<div class="style__image">
+						<img src="img/styles/styles-8.jpg" alt="картина">
+					</div>
+					<p class="style__descr">Шарж</p>
+				</div>
+			</div>
+			<button class="style__btn btn">Посмотреть больше стилей</button>
+		</div>
+		<div class="style__paints"></div>
+	</section>
+	<section class="service">
+		<div class="service__container container">
+			<div class="service__wrapper">
+				<div class="service__image">
+					<img src="img/service/card-1.png" alt="картина">
+				</div>
+				<div class="service__descr">
+					<h2 class="service__title">Потрясающий портрет флип-флап в стиле поп арт</h2>
+					<p class="service__text">Вы подарите яркие эмоции, запомнится надолго!</p>
+					<button class="service__btn btn">Подробнее об услуге</button>
+				</div>
+				
+			</div>
+		</div>
+	</section>
 	<script async src="resources/focus-visible.min.js"></script>
 	<script async src="js/script.min.js"></script>
 </body>

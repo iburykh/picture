@@ -4,6 +4,7 @@
 @import 'base/normalize.scss';
 @import 'base/base.scss';
 @import 'base/container.scss';
+@import 'base/animation.scss';
 
 //============libs============
 // @import '../../node_modules/swiper/swiper-bundle.css';
@@ -13,7 +14,8 @@
 @import 'blocks/header.scss';
 @import 'blocks/buttons.scss';
 @import 'blocks/promo.scss';
-.h {
-	height: 100px;
-	background-color: rgb(184, 206, 235);
-}
+@import 'blocks/pulseBbutton.scss';
+@import 'blocks/title.scss';
+@import 'blocks/design.scss';
+@import 'blocks/styles.scss';
+@import 'blocks/service.scss';
