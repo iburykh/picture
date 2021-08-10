@@ -7,8 +7,7 @@
 body {
     font-family: 'Circe', sans-serif;
     color: #333;
-    // background-color: #fff;
-    background-color: rgb(201, 162, 162);
+    background-color: #fff;
     font-weight: 400;
     font-size: 14px;
     &.scroll-lock {
@@ -18,6 +17,10 @@ body {
 
 ul, ol, li {
 	list-style-type: none;
+}
+
+h1 {
+    margin: 0;
 }
 
 a {
