@@ -57,7 +57,7 @@
 							</ul>
 						</li>
 						<li class="menu__item">
-							<button class="menu__sublink header__btn btn">Заказать</button>
+							<button class="menu__sublink header__btn btn"><span>Заказать</span></button>
 						</li>
 					</ul>
 				</nav>
@@ -99,7 +99,7 @@
 					<p class="promo__send">
 						Отправьте фото сейчас и получите дизайн через 1 час
 					</p>
-					<button class="promo__btn btn">Заказать портрет</button>
+					<button class="promo__btn btn"><span>Заказать портрет</span></button>
 				</div>
 				
 			</div>
@@ -114,7 +114,7 @@
 			<div class="design__descr">
 				<p class="design__subtitle subtitle">Просто отправьте фото и</p>
 				<h2 class="design__title title">Мы пришлем вам дизайн бесплатно в течение 1 часа!</h2>
-				<button class="design__btn btn">Заказать дизайн портрета</button>
+				<button class="design__btn btn"><span>Заказать дизайн портрета</span></button>
 			</div>
 		</div>
 		<div class="design__palette"></div>
@@ -175,7 +175,7 @@
 					<p class="style__descr">Шарж</p>
 				</div>
 			</div>
-			<button class="style__btn btn">Посмотреть больше стилей</button>
+			<button class="style__btn btn"><span>Посмотреть больше стилей</span></button>
 		</div>
 		<div class="style__paints"></div>
 	</section>
@@ -188,9 +188,94 @@
 				<div class="service__descr">
 					<h2 class="service__title">Потрясающий портрет флип-флап в стиле поп арт</h2>
 					<p class="service__text">Вы подарите яркие эмоции, запомнится надолго!</p>
-					<button class="service__btn btn">Подробнее об услуге</button>
+					<button class="service__btn btn"><span>Подробнее об услуге</span></button>
 				</div>
 				
+			</div>
+		</div>
+	</section>
+	<section class="calc">
+		<div class="calc__container container">
+			<h2 class="calc__subtitle subtitle subtitle_centre">Калькулятор</h2>
+			<h3 class="calc__title title title_centre">Рассчитайте стоимость и получите скидку 30%</h3>
+			<div class="calc__wrapper">
+				<form action="#" class="form-calc">
+					<p class="form-calc__text">Загрузите свое фото</p>
+					<div class="file">
+						<div class="file__upload">
+							<input id="formImage" accept=".jpg, .png, .gif" type="file" name="upload" class="file__input">
+							<div class="file__button">
+								Загрузить фотографию
+							</div>
+						</div>
+						<div class="file__name">Файл не выбран</div>
+					</div>
+					<div class="select">
+						<input class="select__input" name="size" type="hidden">
+						<button type="button" class="select__header">Выберите размер картины</button>
+						<div class="select__body">
+							<ul class="select__list">
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="500">40x50</button>
+								</li>
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="1000">50x70</button>
+								</li>
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="1500">70x70</button>
+								</li>
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="2000">70x100</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="select">
+						<input class="select__input" name="material" type="hidden">
+						<button type="button" class="select__header">Выберите материал картины</button>
+						<div class="select__body">
+							<ul class="select__list">
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="1">Холст из волокна</button>
+								</li>
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="1.2">Льняной холст</button>
+								</li>
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="1.5">Холст из натурального хлопка</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="select">
+						<input class="select__input" name="options" type="hidden">
+						<button type="button" class="select__header">Дополнительные услуги</button>
+						<div class="select__body">
+							<ul class="select__list">
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="1000">Покрытие арт-гелем</button>
+								</li>
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="2000">Экспресс-изготовление</button>
+								</li>
+								<li class="select__item">
+									<button type="button" class="select__option" data-value="500">Доставка готовых работ</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<input type="text" class="form-calc__promocode" name="promocode" placeholder="Введите ваш промокод">
+					<div class=form-calc__price>Для расчета нужно выбрать размер картины и материал картины</div>
+					<button class="form-calc__btn btn"><span>Быстрый заказ</span></button>
+				</form>
+				<div class="calc__descr">
+					<div class="calc__image">
+						<img src="img/calc-1.png" alt="картина">
+					</div>
+					<p class="calc__text">
+						Пропорциональный размер изображения рассчитывается автоматически. Если Вы хотите кадрировать изображение или просто узнать стоимость желаемого размера картины, снимите галочку с поля «Пропорциональный»
+					</p>
+				</div>		
 			</div>
 		</div>
 	</section>
