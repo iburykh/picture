@@ -1,8 +1,4 @@
 const upload = () => {
-    // dragenter - объект над dropArea
-    // dragleave - объект за пределами dropArea
-    // dragover - объект зависает над dropArea
-    // drop - объект отправлен в dropArea
     
     const fileInputs = document.querySelectorAll('[name="upload"]');
 	const fileBtn = document.querySelectorAll('.file__button');
@@ -16,7 +12,7 @@ const upload = () => {
 
     function preventDefaults(e) {
         e.preventDefault();
-        e.stopPropagation(); //останавливает всплытие события “клик” к родительским элементам.
+        e.stopPropagation();
     }
 
     ['dragenter', 'dragover'].forEach(eventName => {
@@ -48,7 +44,6 @@ const upload = () => {
         });
 
 		function addFileName() {
-			// провераяем тип  и размер файла
 			if (!['image/jpeg', 'image/png', 'image/gif'].includes(input.files[0].type)) {
 				fileName[index].textContent = 'Разрешены только изображения';
 			} else if (input.files[0].size > 2 * 1024 * 1024) {

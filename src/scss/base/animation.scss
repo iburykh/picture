@@ -52,3 +52,13 @@
 	animation-name: show;
 	animation-duration: 0.8s;
 }
+
+.fade {
+	animation-name: fade;
+	animation-duration: 0.5s;
+}
+  
+@keyframes fade{
+	from {opacity: .1}
+	to {opacity: 1}
+}

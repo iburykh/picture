@@ -1,0 +1,121 @@
+.present {
+	position: relative;
+	&__bg {
+		background-image: url('../img/present/gift-bg.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		@media (max-width: 1370px) {
+			background-position: 60% center;
+		}
+		@media (max-width: 992px) {
+			background-image: none;
+			background-color: $background;
+		}
+	}
+	&__descr {
+		position: relative;
+		z-index: 2;
+		padding: 70px 0px 70px 20px;
+		width: 45%;
+		@media (max-width: 1200px) {
+			width: 50%;
+			padding-left: 40px;
+		}
+		@media (max-width: 992px) {
+			width: 100%;
+			text-align: center;
+			padding: 60px 40px;
+		}
+		@media (max-width: 768px) {
+			padding: 50px 40px 10px 40px;
+		}
+		@media (max-width: 576px) {
+			text-align: left;
+			padding: 30px 0px;
+		}
+	}
+
+	&__title {
+		font-size: 22px;
+	}
+
+	&__subtitle {
+		margin: 30px 0px 20px 0px;
+		font-size: 35px;
+		font-weight: 800;
+	}
+
+	&__text {
+		font-size: 18px;
+		margin: 60px 0px 90px 0px;
+		@media (max-width: 768px) {
+			margin: 40px 0px 50px 0px;
+		}
+	}
+
+	&__features {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 30%;
+		}
+		@media (max-width: 576px) {
+			padding-left: 30px;
+		}
+	}
+
+	&__item {
+		font-weight: 800;
+		font-size: 18px;
+		padding: 0px 15px;
+		text-align: center;
+		@media (max-width: 992px) {
+			margin: 0px 15px;
+		}
+		@media (max-width: 768px) {
+			margin: 30px 15px;
+		}
+		@media (max-width: 576px) {
+			font-style: 15px;
+		}
+		span {
+			position: relative;
+			&::before {
+				content:'';
+				position: absolute;
+				top: -45px;
+				left: -60px;
+				width: 72px;
+				height: 61px;
+			}
+		}
+		.item_1 {
+			&::before {
+				content:'';
+				background: url('../img/present/gift-1.png') center center/cover no-repeat;
+			}
+		}
+		.item_2 {
+			&::before {
+				content:'';
+				background: url('../img/present/gift-2.png') center center/cover no-repeat;
+			}
+		}
+		.item_3 {
+			&::before {
+				content:'';
+				left: -20px;
+				background: url('../img/present/gift-3.png') center center/cover no-repeat;
+			}
+		}
+	}
+}
