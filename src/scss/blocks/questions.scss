@@ -1,0 +1,70 @@
+.questions {
+	padding: 80px 0px 50px 0;
+	position: relative;
+	&__spray {
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: url('../img/spirt.png') center center/cover no-repeat;
+		width: 290px;
+		height: 665px;
+	}
+
+	&__brushes {
+		position: absolute;
+		right: 5%;
+		bottom: 0;
+		background: url('../img/brushes.png') center center/cover no-repeat;
+		width: 363px;
+		height: 341px;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+	}
+
+	&__spoilers {
+		position: relative;
+		z-index: 2;
+		text-align: center;
+	}
+
+	&__btn {
+		display: block;
+		margin: 0px auto;
+		background-color: transparent;
+		border: none;
+		border-bottom: 2px dotted #333;
+		font-size: 22px;
+		margin-top: 30px;
+		position: relative;
+		z-index: 5;
+		&.active {
+			color: $main-color;
+			border-bottom: 2px dotted $main-color;
+		}
+	}
+
+	&__block {
+		width: 66%;
+		margin: 0 auto;
+		padding-top: 30px;
+	}
+	&__text {
+		position: relative;
+		padding: 40px;
+		background-color: $background;
+		text-align: left;
+		line-height: 1.5;
+		&::before {
+			content:'';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: -60px;
+			border: 30px solid transparent;
+			border-bottom: 30px solid $background;
+		}
+
+	}
+}

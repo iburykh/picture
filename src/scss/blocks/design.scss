@@ -60,3 +60,11 @@
 		}
 	}
 }
+.design-catalog {
+	.design__img {
+		padding: 0px 0px 29% 0px;
+		@media (max-width: 768px) {
+			padding: 0px 0px 59% 0px;
+		}
+	}
+}

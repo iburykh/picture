@@ -34,6 +34,7 @@
 		animation-name: pulse_1;
 		animation-iteration-count: infinite;
 		z-index: -1;
+		transition: all 0.3s ease 0s;
 		&:nth-child(2) {
 			animation-name: pulse_2;
 		}

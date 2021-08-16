@@ -7,8 +7,7 @@
 @import 'base/animation.scss';
 
 //============libs============
-// @import '../../node_modules/swiper/swiper-bundle.css';
-// @import 'base/swiper-bundle.scss';
+@import 'base/swiper-bundle.scss';
 
 //============blocks==========
 @import 'blocks/header.scss';
@@ -22,3 +21,8 @@
 @import 'blocks/calc.scss';
 @import 'blocks/portfolio.scss';
 @import 'blocks/present.scss';
+@import 'blocks/advantages.scss';
+@import 'blocks/sizes.scss';
+@import 'blocks/process.scss';
+@import 'blocks/feedback.scss';
+@import 'blocks/questions.scss';
