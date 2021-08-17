@@ -15,7 +15,7 @@ const slider = () => {
 		initialSlide: 0,
 		slidesPerView: 1,
 		loop: true,
-		speed: 800
+		speed: 500
 	});
 };
 export default slider;

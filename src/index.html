@@ -6,12 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Картины</title>
+	@@include('blocks/_favicon.html')
 
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-	<button class="pulse-button">
+	<button class="pulse-button small-lock">
 		<span class="pulse-button__icon"></span>
 		<span class="pulse-button__rings"></span>
 		<span class="pulse-button__rings"></span>
@@ -57,7 +58,7 @@
 							</ul>
 						</li>
 						<li class="menu__item">
-							<button class="menu__sublink header__btn btn"><span>Заказать</span></button>
+							<button class="menu__sublink header__btn btn popup-order_btn"><span>Заказать</span></button>
 						</li>
 					</ul>
 				</nav>
@@ -99,7 +100,7 @@
 					<p class="promo__send">
 						Отправьте фото сейчас и получите дизайн через 1 час
 					</p>
-					<button class="promo__btn btn"><span>Заказать портрет</span></button>
+					<button class="promo__btn btn popup-order_btn"><span>Заказать портрет</span></button>
 				</div>
 				
 			</div>
@@ -114,7 +115,7 @@
 			<div class="design__descr">
 				<p class="design__subtitle subtitle">Просто отправьте фото и</p>
 				<h2 class="design__title title">Мы пришлем вам дизайн бесплатно в течение 1 часа!</h2>
-				<button class="design__btn btn"><span>Заказать дизайн портрета</span></button>
+				<button class="design__btn btn popup-order_btn"><span>Заказать дизайн портрета</span></button>
 			</div>
 		</div>
 		<div class="design__palette"></div>
@@ -183,12 +184,12 @@
 		<div class="service__container container">
 			<div class="service__wrapper">
 				<div class="service__image">
-					<img src="img/service/card-1.png" loading="lazy" alt="картина">
+					<img src="img/service/card-1.png" loading="lazy" alt="картина" width="340" height="362">
 				</div>
 				<div class="service__descr">
 					<h2 class="service__title">Потрясающий портрет флип-флап в стиле поп арт</h2>
 					<p class="service__text">Вы подарите яркие эмоции, запомнится надолго!</p>
-					<button class="service__btn btn"><span>Подробнее об услуге</span></button>
+					<button class="service__btn btn popup-consult_btn"><span>Подробнее об услуге</span></button>
 				</div>
 				
 			</div>
@@ -479,7 +480,7 @@
 				<div class="service__descr">
 					<h2 class="service__title">Оформление в багетные рамы</h2>
 					<p class="service__text">Мы можем предложить вам оформление в любую раму из огромного ассортимента по желанию.</p>
-					<button class="service__btn btn"><span>Подробнее об услуге</span></button>
+					<button class="service__btn btn popup-consult_btn"><span>Подробнее об услуге</span></button>
 				</div>
 				
 			</div>
@@ -491,7 +492,7 @@
 				<div class="service__descr">
 					<h2 class="service__title">Заказать портрет маслом у портретиста</h2>
 					<p class="service__text">Эксклюзивно, качественно, детальная ручная прорисовка.</p>
-					<button class="service__btn btn"><span>Подробнее об услуге</span></button>
+					<button class="service__btn btn popup-consult_btn"><span>Подробнее об услуге</span></button>
 				</div>
 				<div class="service__image">
 					<img src="img/service/card-3.png" loading="lazy" alt="картина">
@@ -504,7 +505,7 @@
 			<div class="design__descr">
 				<p class="design__subtitle subtitle">Не нашли, что искали?</p>
 				<h2 class="design__title title">Загрузите наш каталог с 50 вариантами стиля бесплатно!</h2>
-				<button class="design__btn btn"><span>Загрузить каталог</span></button>
+				<button class="design__btn btn popup-consult_btn"><span>Загрузить каталог</span></button>
 			</div>
 			<div class="design__img">
 				<img src="img/design/promo-2.png" loading="lazy" alt="портрет из фото">
@@ -518,7 +519,7 @@
 					<div class="slider-item swiper-slide">
 						<div class="slider-item__image">
 							<img src="img/feedback/feedback-1.png" loading="lazy"alt="фото">
-							<button class="slider-item__btn btn"><span>Хочу так же</span></button>
+							<button class="slider-item__btn btn popup-order_btn"><span>Хочу так же</span></button>
 						</div>
 						<div class="slider-item__feedback">
 							<p class="slider-item__header">
@@ -533,7 +534,7 @@
 					<div class="slider-item swiper-slide">
 						<div class="slider-item__image">
 							<img src="img/feedback/feedback-2.jpg" loading="lazy" alt="фото">
-							<button class="slider-item__btn btn"><span>Хочу так же</span></button>
+							<button class="slider-item__btn btn popup-order_btn"><span>Хочу так же</span></button>
 						</div>
 						<div class="slider-item__feedback">
 							<p class="slider-item__header">
@@ -548,7 +549,7 @@
 					<div class="slider-item swiper-slide">
 						<div class="slider-item__image">
 							<img src="img/feedback/feedback-3.jpg" loading="lazy" alt="фото">
-							<button class="slider-item__btn btn"><span>Хочу так же</span></button>
+							<button class="slider-item__btn btn popup-order_btn"><span>Хочу так же</span></button>
 						</div>
 						<div class="slider-item__feedback">
 							<p class="slider-item__header">
@@ -572,8 +573,8 @@
 		<div class="questions__container container">
 			<h2 class="questions__subtitle subtitle subtitle_centre">Часто задаваемые вопросы</h2>
 			<h3 class="questions__title title title_centre">Ответим на любой из ваших вопросов</h3>
-			<div class="questions__spoilers" data-one-spoller>
-				<button class="questions__btn">Сколько времени нужно для изготовления заказа?</button>
+			<div class="questions__spoilers spoilers" data-one-spoller>
+				<button class="questions__btn spoiler__btn">Сколько времени нужно для изготовления заказа?</button>
 				<div class="questions__block" hidden>
 					<div class="questions__text">
 						Время выполнения заказа зависит от трех факторов: сложности картины, стиля написания и размера. Среднее время выполнения заказа составляет 7 дней без учета времени на доставку. В ряде случаев по желанию заказчика можно уменьшить срок до 5 дней.
@@ -581,19 +582,19 @@
 						Примечание: Если Вы решите что-то изменить в картине, внести коррективы - это может занять дополнительное время, которое не учитывается при оговоренном сроке выполнения.
 					</div>
 				</div>
-				<button class="questions__btn">Смогу ли я увидеть картину до ее получения?</button>
+				<button class="questions__btn spoiler__btn">Смогу ли я увидеть картину до ее получения?</button>
 				<div class="questions__block" hidden>
 					<div class="questions__text">
 						Да. По готовности, мы отправляем по электронной почте цифровое фото Вашей картины, для того, чтобы Вы смогли, при необходимости внести свои корректировки и пожелания, если таковые будут. Вы также сможете увидеть картину "вживую" в нашем салоне. Сообщите об этом Вашему менеджеру.
 					</div>
 				</div>
-				<button class="questions__btn">Какого формата должны быть фотографии</button>
+				<button class="questions__btn spoiler__btn">Какого формата должны быть фотографии</button>
 				<div class="questions__block" hidden>
 					<div class="questions__text">
 						Мы работаем со всеми известными форматами изображений! Через сайт вы можете загрузить JPEG, TIFF, PNG размером до 50 мегабайт. Вы должны обладать авторскими правами или иметь разрешение на использование изображения. Если у Вас другой формат изображения (RAW, PDF), то вы можете воспользоваться FTP загрузчиком. Если вы хотите сделать фото из бумажной фотографии (не цифровой), пришлите его нам, мы отсканируем, обработаем и вернем фото вместе с вашим заказом!
 					</div>
 				</div>
-				<button class="questions__btn">Могу ли я дать особые указания художнику</button>
+				<button class="questions__btn spoiler__btn">Могу ли я дать особые указания художнику</button>
 				<div class="questions__block" hidden>
 					<div class="questions__text">
 						Когда вы размещаете свой заказ на сайте, вы можете добавить свои комментарии в специальном текстовом поле. Вы также можете: объединить объекты с разных фото в одно или удалить объекты с фото, можете поменять задний фон, поменять одежду, наряды, сделать цветную картину с черно-белого фото, а также заказать картину с поврежденного или старого фото.
@@ -602,6 +603,159 @@
 			</div>
 		</div>
 	</section>
+	<section class="design design_bg">
+		<div class="design__container container">
+			<div class="design__img">
+				<img src="img/design/promo-3.png" loading="lazy" alt="портрет из фото">
+			</div>
+			<div class="design__descr">
+				<p class="design__subtitle subtitle">Просто отправьте фото и</p>
+				<h2 class="design__title title">Мы пришлем вам дизайн бесплатно в течение 1 часа!</h2>
+				<button class="design__btn btn popup-order_btn"><span>Заказать дизайн портрета</span></button>
+			</div>
+		</div>
+	</section>
+	<section class="consultation">
+		<div class="consultation__container container">
+			<h2 class="consultation__subtitle subtitle subtitle_centre">Остались вопросы?</h2>
+			<h3 class="consultation__title title title_centre">Получите консультацию художника!</h3>
+			<form action="#" class="form-consultation form">
+				<div class="form-consultation__message form-message fade">Спасибо! Скоро мы с вами свяжемся!</div>
+				<input name="name" placeholder="Ваше имя" type="text" autocomplete="on" class="form-consultation__input req">
+				<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="form-consultation__input req">
+				<input name="email" placeholder="Ваш E-mail" type="email" autocomplete="on" class="form-consultation__input email req">
+				<input name="message" placeholder="Задайте ваш вопрос здесь" type="text" autocomplete="on" class="form-consultation__text req">
+				<button class="form-consultation__btn btn"><span>Получить консультацию</span></button>
+			</form>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer__container container">
+			<nav class="footer__menu">
+				<div class="footer__block">
+					<h3 class="footer__title">Портрет на холсте</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">Поп-арт</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Живопись</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Коллаж</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Портрет в образе</a>
+						</li>
+					</ul>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">Фотомозаика</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Портрет маслом</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Шарж по фото</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Love is...</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h3 class="footer__title">Идеи подарков</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">Готовые картины</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Интерьерные постеры</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__block">
+					<h3 class="footer__title">Покупателям</h3>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">Срочное изготовление</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Доставка и оплата</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Схема работы</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Контакты</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="footer__contacts">
+				<a href="tel:+78002342334" class="footer__mobile">8 800 234-23-34</a>
+				<a href="tel:+74952342334" class="footer__phone">+7 495 234-23-34</a>
+				<p class="footer__text">Круглосуточно, без выходных</p>
+				<a href="mailto:info@kartiny.art" class="footer__email">E-mail: info@kartiny.art</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div class="overlay" tabindex="-1" data-modal>
+		<div class="popup-gift">
+			<div class="popup-gift__content" role="dialog">
+				<button class="popup-close" aria-label="закрыть окно">&times;</button>
+				<div class="popup-gift__title">У нас для вас есть подарок!</div>
+				<div class="popup-gift__icon"></div>
+				<p class="popup-gift__descr">
+					Введите промо-код IWANTPOPART и получите скидку 30% на портрет любого размера в стиле pop-art!
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-order" tabindex="-1" data-modal>
+		<div class="popup-order__wrapper">
+			<div class="popup-order__content" role="dialog">
+				<button class="popup-close" aria-label="закрыть окно.">&times;</button>
+				<form action="#" class="popup-form form">
+					<div class="popup-form__title">Заказать дизайн портрета</div>
+					<div class="file">
+						<div class="file__upload">
+							<input id="formImage" accept=".jpg, .png, .gif" type="file" name="upload" class="file__input">
+							<div class="file__button">
+								Загрузить фотографию
+							</div>
+						</div>
+						<div class="file__name">Файл не выбран</div>
+					</div>
+					<input name="name" placeholder="Ваше имя" type="text" autocomplete="on" class="popup-form__input req">
+					<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="popup-form__input req">
+					<input name="email" placeholder="Ваш e-mail" type="email" autocomplete="on" class="popup-form__input req email">
+					<textarea name="text" placeholder="Комментарий" autocomplete="off" class="popup-form__textarea"></textarea>
+					<div class="popup-form__message form-message fade">Спасибо! Скоро мы с вами свяжемся!</div>
+					<button class="popup-form__btn btn"><span>Отправить дизайнеру</span></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-consult" tabindex="-1" data-modal>
+		<div class="popup-consult__wrapper">
+			<div class="popup-consult__content" role="dialog">
+				<button class="popup-close" aria-label="закрыть окно.">&times;</button>
+				<form action="#" class="popup-form form">
+					<div class="popup-form__title">Остались вопросы? Закажите обратный звонок</div>
+					<input name="name" placeholder="Ваше имя" type="text" autocomplete="on" class="popup-form__input req">
+					<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="popup-form__input req">
+					<div class="popup-form__message form-message fade">Спасибо! Скоро мы с вами свяжемся!</div>
+					<button class="popup-form__btn btn"><span>Отправить дизайнеру</span></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<script async src="resources/focus-visible.min.js"></script>
 	<script async src="js/script.min.js"></script>
 </body>

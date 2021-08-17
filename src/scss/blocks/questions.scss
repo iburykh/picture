@@ -1,6 +1,9 @@
 .questions {
 	padding: 80px 0px 50px 0;
 	position: relative;
+	@media (max-width: 992px) {
+		padding: 50px 0px;
+	}
 	&__spray {
 		position: absolute;
 		left: 0;
@@ -8,6 +11,15 @@
 		background: url('../img/spirt.png') center center/cover no-repeat;
 		width: 290px;
 		height: 665px;
+		z-index: 5;
+		@media (max-width: 1200px) {
+			top: 125px;
+			width: 200px;
+			height: 485px;
+		}
+		@media (max-width: 992px) {
+			display: none;
+		}
 	}
 
 	&__brushes {
@@ -17,10 +29,22 @@
 		background: url('../img/brushes.png') center center/cover no-repeat;
 		width: 363px;
 		height: 341px;
+		@media (max-width: 1600px) {
+			right: 0;
+		}
+		@media (max-width: 1450px) {
+			width: 250px;
+			height: 240px;
+		}
+		@media (max-width: 992px) {
+			display: none;
+		}
 	}
 
 	&__title {
 		margin-bottom: 30px;
+		position: relative;
+		z-index: 2;
 	}
 
 	&__spoilers {
@@ -39,6 +63,15 @@
 		margin-top: 30px;
 		position: relative;
 		z-index: 5;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				color: $main-color;
+				border-bottom: 2px dotted $main-color;
+			}
+		}
+		@media (max-width: 576px) {
+			font-size: 13px;
+		}
 		&.active {
 			color: $main-color;
 			border-bottom: 2px dotted $main-color;
@@ -49,6 +82,12 @@
 		width: 66%;
 		margin: 0 auto;
 		padding-top: 30px;
+		@media (max-width: 992px) {
+			width: 90%;
+		}
+		@media (max-width: 576px) {
+			width: 100%;
+		}
 	}
 	&__text {
 		position: relative;

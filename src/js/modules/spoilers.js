@@ -1,13 +1,13 @@
 const spoilers = () => {
-	const btns = document.querySelectorAll('.questions__btn');
+	const btns = document.querySelectorAll('.spoiler__btn');
 
 	btns.forEach(btn => {
         btn.addEventListener('click', function(e) {
-			const spollersBlock = this.closest('.questions__spoilers');
+			const spollersBlock = this.closest('.spoilers');
 			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
 			if (!spollersBlock.querySelectorAll('.slide').length) {
 				if (oneSpoller && !this.classList.contains('active')) {
-					const spollerActive = spollersBlock.querySelector('.questions__btn.active');
+					const spollerActive = spollersBlock.querySelector('.spoiler__btn.active');
 					if (spollerActive) {
 						spollerActive.classList.remove('active');
 						slideUp(spollerActive.nextElementSibling, 500);

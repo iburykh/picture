@@ -1,0 +1,83 @@
+.consultation {
+	padding: 80px 0px;
+	background-color: #eed4d2;
+	@media (max-width: 992px) {
+		padding: 60px 0px;
+	}
+	&__title {
+		margin-bottom: 30px;
+		@media (max-width: 992px) {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.form-consultation {
+	width: 84%;
+	margin: 0px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	@media (max-width: 1200px) {
+		width: 90%;
+	}
+	@media (max-width: 992px) {
+		width: 100%;
+	}
+	@media (max-width: 768px) {
+		flex-direction: column;
+		width: 80%;
+	}
+	@media (max-width: 576px) {
+		width: 100%;
+	}
+	&__message {
+		flex: 0 1 100%;
+		text-align: center;
+		font-weight: 700;
+		font-size: 16px;
+		margin-bottom: 10px;
+		opacity: 0;
+		transition: all 0.5s ease 0s;
+		&.error {
+			opacity: 1;
+			color: #b30808;
+		}
+		&.sendmess {
+			opacity: 1;
+			color: $main-color;
+		}
+	}
+	&__input, &__text {
+		margin: 20px 0px;
+		padding: 15px 40px;
+		border: none;
+		border-radius: 50px;
+		font-weight: 800;
+		&.error {
+			box-shadow: 0px 0px 5px #b30808;
+		}
+		&:focus {
+			box-shadow: 0px 0px 5px $main-color;
+		}
+	}
+	&__input {
+		flex: 0 0 30%;
+		width: 30%;
+		@media (max-width: 768px) {
+			flex: 0 1 100%;
+			width: 100%;
+		}
+	}
+
+	&__text {
+		flex: 0 1 100%;
+		width: 100%;
+	}
+
+	&__btn {
+		margin: 20px auto 0px auto;
+		padding: 15px 30px;
+	}
+}

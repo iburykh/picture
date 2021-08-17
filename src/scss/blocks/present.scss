@@ -100,19 +100,16 @@
 		}
 		.item_1 {
 			&::before {
-				content:'';
 				background: url('../img/present/gift-1.png') center center/cover no-repeat;
 			}
 		}
 		.item_2 {
 			&::before {
-				content:'';
 				background: url('../img/present/gift-2.png') center center/cover no-repeat;
 			}
 		}
 		.item_3 {
 			&::before {
-				content:'';
 				left: -20px;
 				background: url('../img/present/gift-3.png') center center/cover no-repeat;
 			}
