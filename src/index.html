@@ -17,7 +17,7 @@
 		<span class="pulse-button__rings"></span>
 		<span class="pulse-button__rings"></span>
 	</button>
-	<header id="menu" class="header">
+	<header class="header">
 		<div class="header__container container">
 			<div class="header__wrapper">
 				<a href="#" class="header__logo" aria-label="логотип">
@@ -28,9 +28,9 @@
 						<li class="menu__item">
 							<a href="#" class="menu__link">Картина из вашего фото</a>
 							<ul class="menu__sublist">
-								<li class="menu__subitem"><a href="#styles" class="menu__sublink">Фотомозаика</a></li>
-								<li class="menu__subitem"><a href="#styles" class="menu__sublink">Шарж по фото</a></li>
-								<li class="menu__subitem"><a href="#styles" class="menu__sublink">Love is...</a></li>
+								<li class="menu__subitem"><a href="#style" class="menu__sublink">Фотомозаика</a></li>
+								<li class="menu__subitem"><a href="#style" class="menu__sublink">Шарж по фото</a></li>
+								<li class="menu__subitem"><a href="#style" class="menu__sublink">Love is...</a></li>
 							</ul>
 						</li>
 						<li class="menu__item">
@@ -51,10 +51,10 @@
 						<li class="menu__item">
 							<a href="#" class="menu__link">Покупателям</a>
 							<ul class="menu__sublist">
-								<li class="menu__subitem"><a href="#often-questions" class="menu__sublink">Срочное изготовление</a></li>
-								<li class="menu__subitem"><a href="#often-questions" class="menu__sublink">Доставка и оплата</a></li>
-								<li class="menu__subitem"><a href="#scheme" class="menu__sublink">Схема работы</a></li>
-								<li class="menu__subitem"><a href="#footer" class="menu__sublink">Контакты</a></li>
+								<li class="menu__subitem"><a href="#questions" class="menu__sublink">Срочное изготовление</a></li>
+								<li class="menu__subitem"><a href="#questions" class="menu__sublink">Доставка и оплата</a></li>
+								<li class="menu__subitem"><a href="#process" class="menu__sublink">Схема работы</a></li>
+								<li class="menu__subitem"><a href="#footer__email" class="menu__sublink">Контакты</a></li>
 							</ul>
 						</li>
 						<li class="menu__item">
@@ -120,7 +120,7 @@
 		</div>
 		<div class="design__palette"></div>
 	</section>
-	<section class="style" id="styles">
+	<section class="style">
 		<div class="style__container container">
 			<p class="style__subtitle subtitle subtitle_centre">Портрет на холсте</p>
 			<h2 class="style__title title title_centre">Популярные стили рисунка</h2>
@@ -567,7 +567,7 @@
 			<button class="feedback__next next" aria-label="следующий слайд"></button>
 		</div>
 	</div>
-	<section class="questions" id="often-questions">
+	<section class="questions">
 		<div class="questions__spray"></div>
 		<div class="questions__brushes"></div>
 		<div class="questions__container container">
@@ -622,9 +622,9 @@
 			<form action="#" class="form-consultation form">
 				<div class="form-consultation__message form-message fade">Спасибо! Скоро мы с вами свяжемся!</div>
 				<input name="name" placeholder="Ваше имя" type="text" autocomplete="on" class="form-consultation__input req">
-				<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="form-consultation__input req">
+				<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="form-consultation__input tel req">
 				<input name="email" placeholder="Ваш E-mail" type="email" autocomplete="on" class="form-consultation__input email req">
-				<input name="message" placeholder="Задайте ваш вопрос здесь" type="text" autocomplete="on" class="form-consultation__text req">
+				<input name="message" placeholder="Задайте ваш вопрос здесь" type="text" autocomplete="on" class="form-consultation__text req check">
 				<button class="form-consultation__btn btn"><span>Получить консультацию</span></button>
 			</form>
 		</div>
@@ -636,30 +636,30 @@
 					<h3 class="footer__title">Портрет на холсте</h3>
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="#" class="footer__link">Поп-арт</a>
+							<a href="#style" class="footer__link">Поп-арт</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Живопись</a>
+							<a href="#style" class="footer__link">Живопись</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Коллаж</a>
+							<a href="#style" class="footer__link">Коллаж</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Портрет в образе</a>
+							<a href="#style" class="footer__link">Портрет в образе</a>
 						</li>
 					</ul>
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="#" class="footer__link">Фотомозаика</a>
+							<a href="#style" class="footer__link">Фотомозаика</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Портрет маслом</a>
+							<a href="#style" class="footer__link">Портрет маслом</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Шарж по фото</a>
+							<a href="#style" class="footer__link">Шарж по фото</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Love is...</a>
+							<a href="#style" class="footer__link">Love is...</a>
 						</li>
 					</ul>
 				</div>
@@ -667,10 +667,10 @@
 					<h3 class="footer__title">Идеи подарков</h3>
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="#" class="footer__link">Готовые картины</a>
+							<a href="#portfolio" class="footer__link">Готовые картины</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Интерьерные постеры</a>
+							<a href="#portfolio" class="footer__link">Интерьерные постеры</a>
 						</li>
 					</ul>
 				</div>
@@ -678,16 +678,16 @@
 					<h3 class="footer__title">Покупателям</h3>
 					<ul class="footer__list">
 						<li class="footer__item">
-							<a href="#" class="footer__link">Срочное изготовление</a>
+							<a href="#questions" class="footer__link">Срочное изготовление</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Доставка и оплата</a>
+							<a href="#questions" class="footer__link">Доставка и оплата</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Схема работы</a>
+							<a href="#process" class="footer__link">Схема работы</a>
 						</li>
 						<li class="footer__item">
-							<a href="#" class="footer__link">Контакты</a>
+							<a href="#footer" class="footer__link">Контакты</a>
 						</li>
 					</ul>
 				</div>
@@ -705,7 +705,7 @@
 	<div class="overlay" tabindex="-1" data-modal>
 		<div class="popup-gift">
 			<div class="popup-gift__content" role="dialog">
-				<button class="popup-close" aria-label="закрыть окно">&times;</button>
+				<button class="popup-close tab-last" aria-label="закрыть окно">&times;</button>
 				<div class="popup-gift__title">У нас для вас есть подарок!</div>
 				<div class="popup-gift__icon"></div>
 				<p class="popup-gift__descr">
@@ -731,11 +731,11 @@
 						<div class="file__name">Файл не выбран</div>
 					</div>
 					<input name="name" placeholder="Ваше имя" type="text" autocomplete="on" class="popup-form__input req">
-					<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="popup-form__input req">
+					<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="popup-form__input req tel">
 					<input name="email" placeholder="Ваш e-mail" type="email" autocomplete="on" class="popup-form__input req email">
-					<textarea name="text" placeholder="Комментарий" autocomplete="off" class="popup-form__textarea"></textarea>
+					<textarea name="text" placeholder="Комментарий" autocomplete="off" class="popup-form__textarea check"></textarea>
 					<div class="popup-form__message form-message fade">Спасибо! Скоро мы с вами свяжемся!</div>
-					<button class="popup-form__btn btn"><span>Отправить дизайнеру</span></button>
+					<button class="popup-form__btn btn tab-last"><span>Отправить дизайнеру</span></button>
 				</form>
 			</div>
 		</div>
@@ -748,13 +748,17 @@
 				<form action="#" class="popup-form form">
 					<div class="popup-form__title">Остались вопросы? Закажите обратный звонок</div>
 					<input name="name" placeholder="Ваше имя" type="text" autocomplete="on" class="popup-form__input req">
-					<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="popup-form__input req">
+					<input name="phone" placeholder="Ваш телефон" type="text" autocomplete="on" class="popup-form__input tel req">
 					<div class="popup-form__message form-message fade">Спасибо! Скоро мы с вами свяжемся!</div>
-					<button class="popup-form__btn btn"><span>Отправить дизайнеру</span></button>
+					<button class="popup-form__btn btn tab-last"><span>Получить консультацию</span></button>
 				</form>
 			</div>
 		</div>
 	</div>
+
+	<a href="#header" class="pageup small-lock">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#c51abb" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg>
+    </a>
 
 	<script async src="resources/focus-visible.min.js"></script>
 	<script async src="js/script.min.js"></script>

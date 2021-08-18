@@ -12,6 +12,9 @@ import pictureSize from './modules/picture_size';
 import spoilers from './modules/spoilers';
 import form from './modules/form';
 import popup from './modules/popup';
+import mask from './modules/mask_tel';
+import checkTextInputs from './modules/check_inputs';
+import smoothScroll from './modules/scroll';
 
 'use strict';
 
@@ -27,3 +30,34 @@ slider();
 spoilers();
 form();
 popup();
+mask();
+checkTextInputs();
+
+//Up arrow
+
+const upElem = document.querySelector('.pageup');
+
+window.addEventListener('scroll', () => {
+	if (document.documentElement.scrollTop > 1300) {
+		upElem.classList.add('active');
+	} else {
+		upElem.classList.remove('active');
+	}
+});
+
+upElem.addEventListener('click', (e) => {
+	e.preventDefault();
+	smoothScroll(upElem);
+})
+
+//Footer links
+
+let footerItems = document.querySelectorAll('.footer__link');
+
+footerItems.forEach(item => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
+		let target = e.target;
+		smoothScroll(target);
+	})
+})

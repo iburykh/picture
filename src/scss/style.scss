@@ -74,3 +74,18 @@
 		color: $main-color;
 	}
 }
+
+.pageup  {
+    opacity: 0;
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 35px;
+    height: 35px;
+    z-index: 100;
+    transition: opacity 0.3s ease 0s;
+    &.active {
+        opacity: 1;
+    }
+}

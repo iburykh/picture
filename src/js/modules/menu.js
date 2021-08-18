@@ -1,7 +1,6 @@
 const menu = () => {
-	let menuLink = document.querySelectorAll('.menu__link');
-	let menuList = document.querySelectorAll('.menu__sublist');
-	// let menuSublink = document.querySelectorAll('.menu__sublink');
+	let menuBtn = document.querySelectorAll('.menu__link');
+	let menuItem = document.querySelectorAll('.menu__item');
 
 	const isMobile = {
 		Android: function () {
@@ -32,42 +31,54 @@ const menu = () => {
 	if (isMobile.any()) {
 		document.body.classList.add('touch');
 
-		for (let index = 0; index < menuLink.length; index++) {
-			let item = menuLink[index];
+		for (let index = 0; index < menuBtn.length; index++) {
+			let item = menuBtn[index];
 			item.addEventListener('click', function(e) {
 				let target = e.target
 				if (target) {
 					e.preventDefault();
 				}
-				menuList.forEach(list => {
-					if (list !== menuList[index]) {
-						list.classList.remove('active');
+				let screenWidth = window.screen.width;
+				let m = item.parentElement;
+				menuItem.forEach(item => {
+					//! необходимо указать размер экрана, до которого будут закрываться уже открытые списки
+					if (item !== m && screenWidth > 992) {
+						item.classList.remove('active');
 					}
 				});
-				menuList[index].classList.toggle('active');
+				item.parentElement.classList.toggle('active');
 			});
 		}
 	} else {
 		document.body.classList.add('pc');
 
-		for (let index = 0; index < menuLink.length; index++) {
-			let item = menuLink[index];
+		for (let index = 0; index < menuBtn.length; index++) {
+			let item = menuBtn[index];
 			item.addEventListener('keydown', function(e) {
 				if (e.code === 'Enter' || e.code === 'NumpadEnter' || e.code === 'Space') {
 					let target = e.target
 					if (target) {
 						e.preventDefault();
 					}
-					menuList.forEach(list => {
-						if (list !== menuList[index]) {
-							list.classList.remove('active');
+					let m = item.parentElement;
+					menuItem.forEach(item => {
+						if (item !== m) {
+							item.classList.remove('active');
 						}
 					});
-					menuList[index].classList.toggle('active');
+					item.parentElement.classList.toggle('active');
 				}
 
 			});
 		}
 	}
+
+	document.addEventListener('mouseup', (e) =>{
+		menuItem.forEach(item => {
+			if (!item.contains(e.target)) {
+				item.classList.remove('active');
+			}
+		});
+	});
 };
 export default menu;

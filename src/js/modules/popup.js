@@ -12,6 +12,7 @@ const popup = () => {
               close = document.querySelector(closeSelector),
               windows = document.querySelectorAll('[data-modal]'),
               smallFix = document.querySelectorAll('.small-lock'),
+              tabLast = modal.querySelector('.tab-last'),
               scroll = calcScroll();
         let modalOpen = false;
         let lastFocus;
@@ -48,9 +49,13 @@ const popup = () => {
                 setTimeout(() => {
                     modal.focus();
                 }, 500);
-
-                focusRestrict();
             });
+        });
+
+        tabLast.addEventListener('keydown', (e) => {
+            if (e.code === 'Tab' && modalOpen) {
+                modal.focus();
+            }
         });
 
         function popapClose() {
@@ -102,15 +107,6 @@ const popup = () => {
             let scrollWidth = div.offsetWidth - div.clientWidth;
             div.remove();
             return scrollWidth;
-        }
-
-        function focusRestrict() {
-            document.addEventListener('focus', function(event) {
-                if (modalOpen && !modal.contains(event.target)) {
-                    event.stopPropagation();
-                    modal.focus();
-                }
-            }, true);
         }
     };
 
