@@ -14,8 +14,6 @@ const sliderAuto = () => {
 
         items.forEach(item => {
             item.style.display = 'none';
-			// item.classList.remove('fadeOut');
-			// item.classList.add('fade');
         });
 
 		

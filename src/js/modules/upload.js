@@ -1,45 +1,12 @@
 const upload = () => {
     
     const fileInputs = document.querySelectorAll('[name="upload"]');
-	const fileBtn = document.querySelectorAll('.file__button');
 	const fileName = document.querySelectorAll('.file__name');
 
-    ['dragenter', 'dragleave', 'dragover', 'drop'].forEach(eventName => {
-        fileInputs.forEach(input => {
-            input.addEventListener(eventName, preventDefaults, false);
-        });
-    });
-
-    function preventDefaults(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-
-    ['dragenter', 'dragover'].forEach(eventName => {
-		for (let index = 0; index < fileInputs.length; index++) {
-			let input = fileInputs[index];
-			input.addEventListener(eventName, () => {
-				fileBtn[index].classList.add('active');
-			}, false);
-		}
-    });
-
-    ['dragleave', 'drop'].forEach(eventName => {
-		for (let index = 0; index < fileInputs.length; index++) {
-			let input = fileInputs[index];
-			input.addEventListener(eventName, () => {
-				fileBtn[index].classList.remove('active');
-			}, false);
-		}
-    });
 
 	for (let index = 0; index < fileInputs.length; index++) {
 		let input = fileInputs[index];
-		input.addEventListener('drop', (e) => {
-			input.files = e.dataTransfer.files;
-			addFileName();
-        });
-		input.addEventListener('input', () => {
+		input.addEventListener('change', () => {
 			addFileName();
         });
 

@@ -1,15 +1,13 @@
-import smoothScroll from './scroll';
 const menuBurger = () => {
 	let menuBody = document.querySelector('.menu');
     let menuItem = document.querySelectorAll('.menu__sublink');
     let hamburger = document.querySelector('.hamburger');
+    let btn = document.querySelector('.header__btn');
 
 
     hamburger.addEventListener('click', () => {    
         hamburger.classList.toggle('active');
         menuBody.classList.toggle('active');
-
-        //! если не надо блокировать задний фон - убрать!
         document.body.classList.toggle('scroll-lock');
 
         setTimeout(() => {
@@ -24,19 +22,21 @@ const menuBurger = () => {
             if (hamburger.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 menuBody.classList.remove('active');
-
-                //! если не надо блокировать задний фон - убрать!
                 document.body.classList.remove('scroll-lock');
             }
-            //!если есть выпадающее меню, закрываем его при нажатии на ссылку (или кнопку)
             let menuList = document.querySelectorAll('.menu__sublist');
             menuList.forEach(item => {
                 item.classList.remove('active');
             });
-
-            // плавный скролл
-            smoothScroll(target);
         })
+    })
+
+    btn.addEventListener('click', (e) => {
+        if (hamburger.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            menuBody.classList.remove('active');
+            document.body.classList.remove('scroll-lock');
+        }
     })
 };
 export default menuBurger;

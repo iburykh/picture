@@ -1,14 +1,12 @@
 const form = () => {
 	const forms = document.querySelectorAll('.form');
 
-	//==============Сообщения о ходе отправки==================
 	const message = {
         loading: 'Загрузка...',
         success: 'Спасибо! Скоро мы с вами свяжемся!',
         failure: 'Что-то пошло не так...'
     };
-	//=========================================================
-	//==============Настройка отправки формы===================
+
 	const postData = async (url, data) => {
 		let res = await fetch(url, {
 			method: "POST",
@@ -16,7 +14,7 @@ const form = () => {
 		});	
 		return await res.text();
 	};
-	//=========================================================
+
 	const clearInputs = (inputs, file) => {
         inputs.forEach(item => {
             item.value = '';
@@ -43,14 +41,16 @@ const form = () => {
 						textMessage.textContent = message.loading;
 						textMessage.classList.add('sendmess');
 					}
-					//=========FormData=====================================
+
 					const formData = new FormData(item);
 
-					//! Убрать
+					//! УБРАТЬ
 					for(var pair of formData.entries()) {
-						console.log(pair[0]+ ', '+ pair[1]);
+						console.log(pair[0]+ ': '+ pair[1]);
 					}
-					//======================================================
+					let newfile = formData.get('upload');
+					console.log(newfile.name);
+
 					postData('../server.php', formData)
 					.then(res => {
 						if (textMessage) {
@@ -75,8 +75,6 @@ const form = () => {
 			});
 		});
 	}
-
-	// Валидация формы
 		
 	function formValidate(selector) {
 		let error = 0;

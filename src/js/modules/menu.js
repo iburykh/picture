@@ -41,7 +41,6 @@ const menu = () => {
 				let screenWidth = window.screen.width;
 				let m = item.parentElement;
 				menuItem.forEach(item => {
-					//! необходимо указать размер экрана, до которого будут закрываться уже открытые списки
 					if (item !== m && screenWidth > 992) {
 						item.classList.remove('active');
 					}

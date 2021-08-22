@@ -3,7 +3,6 @@ const pictureSize = () => {
 
     function showImg (block) {
         const img = block.querySelector('img');
-        // отрезаем от пути к картинке 4 символа slice(0, -4) и подставляем '-1.png' (новый адрес с новой картинкой)
         img.src = img.src.slice(0, -4) + '-1.png';
         block.querySelectorAll('div').forEach(p => {
             p.style.display = 'none';

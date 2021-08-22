@@ -1,10 +1,3 @@
-// triggerSelector - кнопка открытия модального окна
-// modalSelector - модальное окно, которое открывается при нажатии на кнопку
-// closeSelector - крестик, закрывающий окно
-// time (в функции showModalByTime) - время, через которое появится окно
-// data-modal - добавить всем модальным окнам (если их несколько)
-// lock - добавить этот класс для блоков с position: absolute или fixed (добавится padding)
-// small - добавить этот класс для маленьких блоков с position: absolute или fixed (добавится margin)
 const popup = () => {
     function bindModal(triggerSelector, modalSelector, closeSelector, destroy = false) {
         const trigger = document.querySelectorAll(triggerSelector),

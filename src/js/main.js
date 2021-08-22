@@ -32,6 +32,7 @@ form();
 popup();
 mask();
 checkTextInputs();
+smoothScroll();
 
 //Up arrow
 
@@ -44,20 +45,3 @@ window.addEventListener('scroll', () => {
 		upElem.classList.remove('active');
 	}
 });
-
-upElem.addEventListener('click', (e) => {
-	e.preventDefault();
-	smoothScroll(upElem);
-})
-
-//Footer links
-
-let footerItems = document.querySelectorAll('.footer__link');
-
-footerItems.forEach(item => {
-	item.addEventListener('click', (e) => {
-		e.preventDefault();
-		let target = e.target;
-		smoothScroll(target);
-	})
-})

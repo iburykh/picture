@@ -17,6 +17,28 @@ const slider = () => {
 		loop: true,
 		speed: 500
 	});
+
+	//===== кнопки внутри слайда (убираем возможность фокуса кнопок неактивных слайдов для Tab) =====
+	
+	let slidActive = document.querySelector('.swiper-slide-active');
+	let btnActive = slidActive.querySelector('.slider-item__btn');
+	let prev = document.querySelector('.feedback__prev');
+	let next = document.querySelector('.feedback__next');
+
+	btnActive.setAttribute('tabindex', '0');
+	let tabBtn = ()=> {
+		btnActive.setAttribute('tabindex', '-1');
+		slidActive = document.querySelector('.swiper-slide-active');
+		btnActive = slidActive.querySelector('.slider-item__btn');
+		btnActive.setAttribute('tabindex', '0');
+	};
+	prev.addEventListener('click', () => {
+		tabBtn();
+	});
+	next.addEventListener('click', () => {
+		tabBtn();
+	});
+
 };
 export default slider;
 

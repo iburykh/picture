@@ -4,16 +4,19 @@ const formCalc = () => {
 	const formText = form.querySelector('.form-calc__price');
 	const promocodeBlock = form.querySelector('.form-calc__promocode');
 	const fileName = form.querySelector('.file__name');
+	const fileInput = form.querySelector('[name="upload"]');
 
 	const select = document.querySelectorAll('.select');
 	const selectHeader = document.querySelectorAll('.select__header');
     const selectItem = document.querySelectorAll('.select__option');
 	const selectBody = document.querySelectorAll('.select__body');
 
+
+
 	const sizeBlock = document.querySelector('[name="size"]');
 	const materialBlock = document.querySelector('[name="material"]');
 	const optionsBlock = document.querySelector('[name="options"]');
-	
+
 	//============== Select ===================================
 	for (let index = 0; index < selectHeader.length; index++) {
 		let item = selectHeader[index];
@@ -81,7 +84,7 @@ const formCalc = () => {
 			method: "POST",
 			body: data
 		});	
-		return await res.text(); //возвращается результат в виде текста(для проверки) или res.json();
+		return await res.text();
 	};
 	//=========================================================
 	const clearInputs = () => {
@@ -109,6 +112,13 @@ const formCalc = () => {
 			for (let key in obj) {
 				formData.append(key, obj[key]);
 			}
+
+			//! УБРАТЬ
+			for(var pair of formData.entries()) {
+				console.log(pair[0]+ ': '+ pair[1]);
+			}
+			let newfile = formData.get('upload');
+			console.log(newfile.name);
 			//======================================================
 			postData('../server.php', formData)
 			.then(res => {
