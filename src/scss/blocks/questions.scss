@@ -8,7 +8,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		background: url('../img/spirt.png') center center/cover no-repeat;
+		background: url('../img/spirt.webp') center center/cover no-repeat;
 		width: 290px;
 		height: 665px;
 		z-index: 5;
@@ -26,7 +26,7 @@
 		position: absolute;
 		right: 5%;
 		bottom: 0;
-		background: url('../img/brushes.png') center center/cover no-repeat;
+		background: url('../img/brushes.webp') center center/cover no-repeat;
 		width: 363px;
 		height: 341px;
 		@media (max-width: 1600px) {
@@ -105,5 +105,13 @@
 			border-bottom: 30px solid $background;
 		}
 
+	}
+}
+.no-webp {
+	.questions__spray {
+		background: url('../img/spirt.png') center center/cover no-repeat;
+	}
+	.questions__brushes {
+		background: url('../img/brushes.png') center center/cover no-repeat;
 	}
 }

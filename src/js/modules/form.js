@@ -42,16 +42,9 @@ const form = () => {
 						textMessage.classList.add('sendmess');
 					}
 
-					const formData = new FormData(item);
+					const formData = new FormData(item)
 
-					//! УБРАТЬ
-					for(var pair of formData.entries()) {
-						console.log(pair[0]+ ': '+ pair[1]);
-					}
-					let newfile = formData.get('upload');
-					console.log(newfile.name);
-
-					postData('../server.php', formData)
+					postData('../resources/server.php', formData)
 					.then(res => {
 						if (textMessage) {
 							textMessage.textContent = message.success;

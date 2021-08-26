@@ -15,7 +15,11 @@ const slider = () => {
 		initialSlide: 0,
 		slidesPerView: 1,
 		loop: true,
-		speed: 500
+		speed: 500,
+		preloadImages: false,
+		lazy: {
+			loadOnTransitionStart: true,
+		  },
 	});
 
 	//===== кнопки внутри слайда (убираем возможность фокуса кнопок неактивных слайдов для Tab) =====

@@ -1,3 +1,4 @@
+"use strict"
 const menuBurger = () => {
 	let menuBody = document.querySelector('.menu');
     let menuItem = document.querySelectorAll('.menu__sublink');
@@ -18,7 +19,6 @@ const menuBurger = () => {
     menuItem.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
-            let target = e.target;
             if (hamburger.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 menuBody.classList.remove('active');
@@ -31,7 +31,7 @@ const menuBurger = () => {
         })
     })
 
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
         if (hamburger.classList.contains('active')) {
             hamburger.classList.remove('active');
             menuBody.classList.remove('active');

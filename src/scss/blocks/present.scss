@@ -1,7 +1,7 @@
 .present {
 	position: relative;
 	&__bg {
-		background-image: url('../img/present/gift-bg.jpg');
+		background-image: url('../img/present/gift-bg.webp');
 		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -100,6 +100,29 @@
 		}
 		.item_1 {
 			&::before {
+				background: url('../img/present/gift-1.webp') center center/cover no-repeat;
+			}
+		}
+		.item_2 {
+			&::before {
+				background: url('../img/present/gift-2.webp') center center/cover no-repeat;
+			}
+		}
+		.item_3 {
+			&::before {
+				left: -20px;
+				background: url('../img/present/gift-3.webp') center center/cover no-repeat;
+			}
+		}
+	}
+}
+.no-webp {
+	.present__bg {
+		background-image: url('../img/present/gift-bg.jpg');
+	}
+	.present__item {
+		.item_1 {
+			&::before {
 				background: url('../img/present/gift-1.png') center center/cover no-repeat;
 			}
 		}
@@ -110,7 +133,6 @@
 		}
 		.item_3 {
 			&::before {
-				left: -20px;
 				background: url('../img/present/gift-3.png') center center/cover no-repeat;
 			}
 		}

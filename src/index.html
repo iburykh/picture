@@ -7,12 +7,13 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Картины</title>
 	@@include('blocks/_favicon.html')
+	@@include('blocks/_fonts.html')
 
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-	<button class="pulse-button small-lock">
+	<button class="pulse-button small-lock" aria-label="подарок">
 		<span class="pulse-button__rings"></span>
 		<span class="pulse-button__rings"></span>
 	</button>
@@ -25,7 +26,7 @@
 				<nav class="menu" tabindex="-1">
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a href="#" class="menu__link">Картина из вашего фото</a>
+							<button class="menu__link">Картина из вашего фото</button>
 							<ul class="menu__sublist">
 								<li class="menu__subitem"><a href="#style" class="menu__sublink scroll">Фотомозаика</a></li>
 								<li class="menu__subitem"><a href="#style" class="menu__sublink scroll">Шарж по фото</a></li>
@@ -33,7 +34,7 @@
 							</ul>
 						</li>
 						<li class="menu__item">
-							<a href="#" class="menu__link">Готовые картины</a>
+							<button class="menu__link">Готовые картины</button>
 							<ul class="menu__sublist">
 								<li class="menu__subitem"><a href="#portfolio" class="menu__sublink scroll">Портрет</a></li>
 								<li class="menu__subitem"><a href="#portfolio" class="menu__sublink scroll">Живопись</a></li>
@@ -41,14 +42,14 @@
 							</ul>
 						</li>
 						<li class="menu__item">
-							<a href="#" class="menu__link">Идеи подарков</a>
+							<button class="menu__link">Идеи подарков</button>
 							<ul class="menu__sublist">
 								<li class="menu__subitem"><a href="#portfolio" class="menu__sublink scroll">Готовые картины</a></li>
 								<li class="menu__subitem"><a href="#portfolio" class="menu__sublink scroll">Интерьерные постеры</a></li>
 							</ul>
 						</li>
 						<li class="menu__item">
-							<a href="#" class="menu__link">Покупателям</a>
+							<button class="menu__link">Покупателям</button>
 							<ul class="menu__sublist">
 								<li class="menu__subitem"><a href="#questions" class="menu__sublink scroll">Срочное изготовление</a></li>
 								<li class="menu__subitem"><a href="#questions" class="menu__sublink scroll">Доставка и оплата</a></li>
@@ -81,10 +82,16 @@
 			<div class="promo__body">
 				<div class="promo__slider">
 					<div class="promo__img fade">
-						<img src="img/promo/main-1.png" loading="lazy" alt="мужчина с картиной">
+						<picture>
+							<source srcset="img/promo/main-1.webp" type="image/webp">
+							<img src="img/promo/main-1.png" loading="lazy" alt="мужчина с картиной">
+						</picture>
 					</div>
 					<div class="promo__img fade">
-						<img src="img/promo/main-2.png" loading="lazy" alt="мужчина с картиной">
+						<picture>
+							<source srcset="img/promo/main-2.webp" type="image/webp">
+							<img src="img/promo/main-2.png" loading="lazy" alt="женщина с картиной">
+						</picture>
 					</div>
 				</div>
 				<div class="promo__descr">
@@ -109,7 +116,10 @@
 	<section class="design">
 		<div class="design__container container">
 			<div class="design__img">
-				<img src="img/design/design.png" loading="lazy" alt="портрет из фото">
+				<picture>
+					<source srcset="img/design/design.webp" type="image/webp">
+					<img src="img/design/design.png" loading="lazy" alt="портрет из фото">
+				</picture>
 			</div>
 			<div class="design__descr">
 				<p class="design__subtitle subtitle">Просто отправьте фото и</p>
@@ -126,25 +136,37 @@
 			<div class="style__wrapper">
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-1.jpg" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-1.webp" type="image/webp">
+							<img src="img/styles/styles-1.jpg" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Маслом</p>
 				</div>
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-2.jpg" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-2.webp" type="image/webp">
+							<img src="img/styles/styles-2.jpg" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Акварелью</p>
 				</div>
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-3.jpg" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-3.webp" type="image/webp">
+							<img src="img/styles/styles-3.jpg" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Карандашом</p>
 				</div>
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-4.jpg" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-4.webp" type="image/webp">
+							<img src="img/styles/styles-4.jpg" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Ручкой</p>
 				</div>
@@ -152,25 +174,37 @@
 			<div class="style__hidden show">
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-5.jpg" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-5.webp" type="image/webp">
+							<img src="img/styles/styles-5.jpg" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Пастелью</p>
 				</div>
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-6.jpg" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-6.webp" type="image/webp">
+							<img src="img/styles/styles-6.jpg" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Поп-арт</p>
 				</div>
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-7.png" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-7.webp" type="image/webp">
+							<img src="img/styles/styles-7.png" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Фотомозаика</p>
 				</div>
 				<div class="style__item">
 					<div class="style__image">
-						<img src="img/styles/styles-8.jpg" loading="lazy" alt="картина">
+						<picture>
+							<source srcset="img/styles/styles-8.webp" type="image/webp">
+							<img src="img/styles/styles-8.jpg" loading="lazy" alt="картина">
+						</picture>
 					</div>
 					<p class="style__descr">Шарж</p>
 				</div>
@@ -183,10 +217,13 @@
 		<div class="service__container container">
 			<div class="service__wrapper">
 				<div class="service__image">
-					<img src="img/service/card-1.png" loading="lazy" alt="картина" width="340" height="362">
+					<picture>
+						<source data-srcset="img/service/card-1.webp" srcset="img/1x1.png" type="image/webp">
+						<img data-src="img/service/card-1.png" src="img/1x1.png" alt="картина" width="340" height="362">
+					</picture>
 				</div>
 				<div class="service__descr">
-					<h2 class="service__title">Потрясающий портрет флип-флап в стиле поп арт</h2>
+					<h2 class="service__title">Потрясающий портрет флип-флап в стиле поп-арт</h2>
 					<p class="service__text">Вы подарите яркие эмоции, запомнится надолго!</p>
 					<button class="service__btn btn popup-consult_btn"><span>Подробнее об услуге</span></button>
 				</div>
@@ -203,7 +240,7 @@
 					<p class="form-calc__text">Загрузите свое фото</p>
 					<div class="file">
 						<div class="file__upload">
-							<input accept=".jpg, .png, .gif" type="file" name="upload" class="file__input">
+							<input accept=".jpg, .png, .gif" type="file" name="upload" class="file__input" aria-label="Загрузить фотографию.">
 							<div class="file__button">
 								Загрузить фотографию
 							</div>
@@ -270,7 +307,10 @@
 				</form>
 				<div class="calc__descr">
 					<div class="calc__image">
-						<img src="img/calc-1.png" loading="lazy" alt="картина">
+						<picture>
+							<source data-srcset="img/calc-1.webp" srcset="img/1x1.png" type="image/webp">
+							<img data-src="img/calc-1.png" src="img/1x1.png" alt="картина" width="410" height="520">
+						</picture>
 					</div>
 					<p class="calc__text">
 						Пропорциональный размер изображения рассчитывается автоматически. Если Вы хотите кадрировать изображение или просто узнать стоимость желаемого размера картины, снимите галочку с поля «Пропорциональный»
@@ -310,34 +350,64 @@
 		</div>
 		<div class="portfolio__wrapper">
 			<div class="portfolio__image all girl">
-				<img src="img/portfolio/portfolio-1.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-1.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-1.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all girl">
-				<img src="img/portfolio/portfolio-2.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-2.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-2.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all lovers">
-				<img src="img/portfolio/portfolio-3.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-3.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-3.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all guy">
-				<img src="img/portfolio/portfolio-4.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-4.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-4.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all chef">
-				<img src="img/portfolio/portfolio-5.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-5.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-5.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all lovers">
-				<img src="img/portfolio/portfolio-6.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-6.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-6.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all lovers">
-				<img src="img/portfolio/portfolio-7.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-7.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-7.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all girl">
-				<img src="img/portfolio/portfolio-8.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-8.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-8.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all girl">
-				<img src="img/portfolio/portfolio-9.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-9.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-9.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 			<div class="portfolio__image all chef">
-				<img src="img/portfolio/portfolio-10.jpg" loading="lazy" alt="человек с картиной">
+				<picture>
+					<source srcset="img/portfolio/portfolio-10.webp" type="image/webp">
+					<img src="img/portfolio/portfolio-10.jpg" loading="lazy" alt="человек с картиной">
+				</picture>
 			</div>
 		</div>
 	</section>
@@ -348,7 +418,7 @@
 				<h2 class="present__title">Портрет по фото</h2>
 				<h3 class="present__subtitle">Лучший подарок для всех!</h3>
 				<p class="present__text">
-					Портрет по фотографии изготовляется на высококачественном холсте, поэтому не беспокойтесь за сохранность своего подарка! Такой приятный презент отлично впишется в интерьерю
+					Портрет по фотографии изготовляется на высококачественном холсте, поэтому не беспокойтесь за сохранность своего подарка! Такой приятный презент отлично впишется в интерьер
 				</p>
 				<div class="present__features">
 					<div class="present__item">
@@ -432,37 +502,55 @@
 			<div class="process__wrapper">
 				<div class="process__item">
 					<div class="process__image">
-						<img src="img/process/scheme-1.png" loading="lazy" alt="схема работы">
+						<picture>
+							<source srcset="img/process/scheme-1.webp" type="image/webp">
+							<img src="img/process/scheme-1.png" loading="lazy" alt="схема работы">
+						</picture>
 					</div>
 					<p class="process__text">Присылаете фотографию и свои пожелания</p>
 				</div>
 				<div class="process__item">
 					<div class="process__image">
-						<img src="img/process/scheme-2.png" loading="lazy" alt="схема работы">
+						<picture>
+							<source srcset="img/process/scheme-2.webp" type="image/webp">
+							<img src="img/process/scheme-2.png" loading="lazy" alt="схема работы">
+						</picture>
 					</div>
 					<p class="process__text">Мы готовим варианты дизайна с учётом ваших требований</p>
 				</div>
 				<div class="process__item">
 					<div class="process__image">
-						<img src="img/process/scheme-3.png" loading="lazy" alt="схема работы">
+						<picture>
+							<source srcset="img/process/scheme-3.webp" type="image/webp">
+							<img src="img/process/scheme-3.png" loading="lazy" alt="схема работы">
+						</picture>
 					</div>
 					<p class="process__text">Вы утверждаете макет и художник приступает к работе</p>
 				</div>
 				<div class="process__item">
 					<div class="process__image">
-						<img src="img/process/scheme-4.png" loading="lazy" alt="схема работы">
+						<picture>
+							<source srcset="img/process/scheme-4.webp" type="image/webp">
+							<img src="img/process/scheme-4.png" loading="lazy" alt="схема работы">
+						</picture>
 					</div>
 					<p class="process__text">Выбираете вариант багетной рамы и оформления</p>
 				</div>
 				<div class="process__item">
 					<div class="process__image">
-						<img src="img/process/scheme-5.png" loading="lazy" alt="схема работы">
+						<picture>
+							<source srcset="img/process/scheme-5.webp" type="image/webp">
+							<img src="img/process/scheme-5.png" loading="lazy" alt="схема работы">
+						</picture>
 					</div>
 					<p class="process__text">Согласовываются адрес и удобное время доставки</p>
 				</div>
 				<div class="process__item">
 					<div class="process__image">
-						<img src="img/process/scheme-6.png" loading="lazy" alt="схема работы">
+						<picture>
+							<source srcset="img/process/scheme-6.webp" type="image/webp">
+							<img src="img/process/scheme-6.png" loading="lazy" alt="схема работы">
+						</picture>
 					</div>
 					<p class="process__text">Вы платите оставшуюся сумму курьеру при получении картины</p>
 				</div>
@@ -474,7 +562,10 @@
 		<div class="service__container container">
 			<div class="service__wrapper">
 				<div class="service__image">
-					<img src="img/service/card-2.jpg" loading="lazy" alt="картина">
+					<picture>
+						<source srcset="img/service/card-2.webp" type="image/webp">
+						<img src="img/service/card-2.jpg" loading="lazy" alt="картина">
+					</picture>
 				</div>
 				<div class="service__descr">
 					<h2 class="service__title">Оформление в багетные рамы</h2>
@@ -494,7 +585,10 @@
 					<button class="service__btn btn popup-consult_btn"><span>Подробнее об услуге</span></button>
 				</div>
 				<div class="service__image">
-					<img src="img/service/card-3.png" loading="lazy" alt="картина">
+					<picture>
+						<source data-srcset="img/service/card-3.webp" srcset="img/1x1.png" type="image/webp">
+						<img data-src="img/service/card-3.png" src="img/1x1.png" alt="картина" width="553" height="421">
+					</picture>
 				</div>
 			</div>
 		</div>
@@ -507,7 +601,10 @@
 				<button class="design__btn btn popup-consult_btn"><span>Загрузить каталог</span></button>
 			</div>
 			<div class="design__img">
-				<img src="img/design/promo-2.png" loading="lazy" alt="портрет из фото">
+				<picture>
+					<source data-srcset="img/design/promo-2.webp" srcset="img/1x1.png" type="image/webp">
+					<img data-src="img/design/promo-2.png" src="img/1x1.png" alt="каталог" width="585" height="339">
+				</picture>
 			</div>
 		</div>
 	</section>
@@ -517,7 +614,10 @@
 				<div class="feedback__wrapper swiper-wrapper">
 					<div class="slider-item swiper-slide">
 						<div class="slider-item__image">
-							<img src="img/feedback/feedback-1.png" loading="lazy"alt="фото">
+							<picture>
+								<source srcset="img/feedback/feedback-1.webp" type="image/webp">
+								<img src="img/feedback/feedback-1.png" loading="lazy" alt="фото" width="360" height="360">
+							</picture>
 							<button class="slider-item__btn btn popup-order_btn" tabindex="-1"><span>Хочу так же</span></button>
 						</div>
 						<div class="slider-item__feedback">
@@ -532,7 +632,10 @@
 					</div>
 					<div class="slider-item swiper-slide">
 						<div class="slider-item__image">
-							<img src="img/feedback/feedback-2.jpg" loading="lazy" alt="фото">
+							<picture>
+								<source srcset="img/feedback/feedback-2.webp" type="image/webp">
+								<img src="img/feedback/feedback-2.jpg" loading="lazy" alt="фото" width="398" height="368">
+							</picture>
 							<button class="slider-item__btn btn popup-order_btn" tabindex="-1"><span>Хочу так же</span></button>
 						</div>
 						<div class="slider-item__feedback">
@@ -547,7 +650,10 @@
 					</div>
 					<div class="slider-item swiper-slide">
 						<div class="slider-item__image">
-							<img src="img/feedback/feedback-3.jpg" loading="lazy" alt="фото">
+							<picture>
+								<source srcset="img/feedback/feedback-3.webp" type="image/webp">
+								<img src="img/feedback/feedback-3.jpg" loading="lazy" alt="фото" width="360" height="360">
+							</picture>
 							<button class="slider-item__btn btn popup-order_btn" tabindex="-1"><span>Хочу так же</span></button>
 						</div>
 						<div class="slider-item__feedback">
@@ -605,7 +711,10 @@
 	<section class="design design_bg">
 		<div class="design__container container">
 			<div class="design__img">
-				<img src="img/design/promo-3.png" loading="lazy" alt="портрет из фото">
+				<picture>
+					<source data-srcset="img/design/promo-3.webp" srcset="img/1x1.png" type="image/webp">
+					<img data-src="img/design/promo-3.png" src="img/1x1.png" alt="портрет из фото" width="585" height="597">
+				</picture>
 			</div>
 			<div class="design__descr">
 				<p class="design__subtitle subtitle">Просто отправьте фото и</p>
@@ -722,7 +831,7 @@
 					<div class="popup-form__title">Заказать дизайн портрета</div>
 					<div class="file">
 						<div class="file__upload">
-							<input accept=".jpg, .png, .gif" type="file" name="upload" class="file__input">
+							<input accept=".jpg, .png, .gif" type="file" name="upload" class="file__input" aria-label="Загрузить фотографию.">
 							<div class="file__button">
 								Загрузить фотографию
 							</div>
@@ -759,8 +868,8 @@
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#c51abb" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg>
     </a>
 
+	<script async src="resources/webp.min.js"></script>
 	<script async src="resources/focus-visible.min.js"></script>
+	<script async src="resources/zenscroll.min.js"></script>
 	<script async src="js/script.min.js"></script>
 </body>
-
-</html>

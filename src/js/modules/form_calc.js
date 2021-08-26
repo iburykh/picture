@@ -112,15 +112,8 @@ const formCalc = () => {
 			for (let key in obj) {
 				formData.append(key, obj[key]);
 			}
-
-			//! УБРАТЬ
-			for(var pair of formData.entries()) {
-				console.log(pair[0]+ ': '+ pair[1]);
-			}
-			let newfile = formData.get('upload');
-			console.log(newfile.name);
 			//======================================================
-			postData('../server.php', formData)
+			postData('../resources/server.php', formData)
 			.then(res => {
 				formText.textContent = message.success;
 				formText.classList.add('success');

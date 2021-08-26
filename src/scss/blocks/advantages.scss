@@ -64,7 +64,7 @@
 			&::before {
 				width: 212px;
 				height: 151px;
-				background: url('../img/advantages/features-1.png') center center/cover no-repeat;
+				background: url('../img/advantages/features-1.webp') center center/cover no-repeat;
 			}
 		}
 		&_2 {
@@ -72,21 +72,21 @@
 				width: 165px;
 				height: 140px;
 				left: -120px;
-				background: url('../img/advantages/features-2.png') center center/cover no-repeat;
+				background: url('../img/advantages/features-2.webp') center center/cover no-repeat;
 			}
 		}
 		&_3 {
 			&::before {
 				width: 190px;
 				height: 250px;
-				background: url('../img/advantages/features-3.png') center center/cover no-repeat;
+				background: url('../img/advantages/features-3.webp') center center/cover no-repeat;
 			}
 		}
 		&_4 {
 			&::before {
 				width: 147px;
 				height: 147px;
-				background: url('../img/advantages/features-4.png') center center/cover no-repeat;
+				background: url('../img/advantages/features-4.webp') center center/cover no-repeat;
 			}
 		}
 		&_5 {
@@ -94,7 +94,7 @@
 				width: 202px;
 				height: 152px;
 				left: -155px;
-				background: url('../img/advantages/features-5.png') center center/cover no-repeat;
+				background: url('../img/advantages/features-5.webp') center center/cover no-repeat;
 			}
 		}
 		&_6 {
@@ -102,8 +102,29 @@
 				width: 196px;
 				height: 143px;
 				left: -146px;
-				background: url('../img/advantages/features-6.png') center center/cover no-repeat;
+				background: url('../img/advantages/features-6.webp') center center/cover no-repeat;
 			}
 		}
+	}
+}
+
+.no-webp {
+	.advantages__text_1::before {
+		background: url('../img/advantages/features-1.png') center center/cover no-repeat;
+	}
+	.advantages__text_2::before {
+		background: url('../img/advantages/features-2.png') center center/cover no-repeat;
+	}
+	.advantages__text_3::before {
+		background: url('../img/advantages/features-3.png') center center/cover no-repeat;
+	}
+	.advantages__text_4::before {
+		background: url('../img/advantages/features-4.png') center center/cover no-repeat;
+	}
+	.advantages__text_5::before {
+		background: url('../img/advantages/features-5.png') center center/cover no-repeat;
+	}
+	.advantages__text_6::before {
+		background: url('../img/advantages/features-6.png') center center/cover no-repeat;
 	}
 }

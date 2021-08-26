@@ -15,12 +15,16 @@
 		font-weight: 800;
 		text-transform: uppercase;
 		color: $main-color;
+		@media (max-width: 992px) {
+			font-size: 17px;
+		}
 	}
 
 }
 .menu {
 	flex: 1 1 auto;
 	margin-left: 30px;
+	outline: none;
 	@media (max-width: 992px) {
 		margin: 0;
 		flex: 0 0;
@@ -40,6 +44,7 @@
 			visibility: visible;
 		}
 	}
+
 	&__list {
 		display: flex;
 		justify-content: space-between;
@@ -54,6 +59,14 @@
 	&__item {
 		position: relative;
 		font-size: 15px;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				.menu__sublist {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
 		@media (max-width: 992px) {
 			font-size: 25px;
 			margin-bottom: 30px;
@@ -65,20 +78,14 @@
 		@media (max-width: 576px) {
 			font-size: 18px;
 		}
-		&.active {
-			.menu__sublist {
-				opacity: 1;
-				visibility: visible;
-				@media (max-width: 992px) {
-					max-height: 500px;
-				}
-			}
-		}
+
 	}
 
 	&__link {
 		position: relative;
-		padding-right: 20px;
+		padding: 3px 20px 3px 0;
+		background-color: transparent;
+		border: none;
 		&::after {
 			content:'';
 			position: absolute;
@@ -88,6 +95,14 @@
 			height: 0;
 			border: 6px solid transparent; 
 			border-top: 6px solid #333;
+		}
+		&.active +  .menu__sublist {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+			@media (max-width: 992px) {
+				max-height: 500px;
+			}
 		}
 	}
 
@@ -107,10 +122,8 @@
 			top: 10px;
 			max-height: 0;
 			border: none;
-			opacity: 1;
-			visibility: visible;
 			overflow: hidden;
-
+			opacity: 1;
 		}
 	}
 
@@ -118,23 +131,30 @@
 		padding: 15px;
 		display: block;
 	}
-}
-
-body.pc {
-	.menu__item {
-		&:hover {
-			.menu__sublist {
-				opacity: 1;
-				visibility: visible;
+	&__subitem {
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background-color: #eed4d2;	
 			}
 		}
 	}
-	.menu__subitem {
-		&:hover {
-			background-color: #eed4d2;	
-		}
-	}
 }
+
+// body.pc {
+// 	.menu__item {
+// 		&:hover {
+// 			.menu__sublist {
+// 				opacity: 1;
+// 				visibility: visible;
+// 			}
+// 		}
+// 	}
+// 	.menu__subitem {
+// 		&:hover {
+// 			background-color: #eed4d2;	
+// 		}
+// 	}
+// }
 
 .hamburger {
 	display: none;

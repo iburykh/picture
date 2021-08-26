@@ -54,11 +54,14 @@
 		bottom: -200px;
 		width: 400px;
 		height: 345px;
-		background: url('../img/design/palette.png') center center/cover no-repeat;
+		background: url('../img/design/palette.webp') center center/cover no-repeat;
 		@media (max-width: 1300px) {
 			display: none;
 		}
 	}
+}
+.no-webp .design__palette{
+    background: url('../img/design/palette.png') center center/cover no-repeat;
 }
 .design-catalog {
 	.design__img {

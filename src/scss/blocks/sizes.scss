@@ -5,7 +5,7 @@
 		padding: 40px 0px;
 	}
 	&__bg {
-		background-image: url('../img/sizes/sizes-bg.jpg');
+		background-image: url('../img/sizes/sizes-bg.webp');
 		background-position:  center center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 		top: 0;
 		left: 0;
 		@media (max-width: 768px) {
-			background-image: url('../img/sizes/sizes-bg-min.jpg');
+			background-image: url('../img/sizes/sizes-bg-min.webp');
 			background-position:  40% center;
 		}
 		@media (max-width: 576px) {
@@ -80,4 +80,11 @@
 		color: black;
 	}
 }
-
+.no-webp {
+	.sizes__bg {
+		background-image: url('../img/sizes/sizes-bg.jpg');
+		@media (max-width: 768px) {
+			background-image: url('../img/sizes/sizes-bg-min.jpg');
+		}
+	}
+}

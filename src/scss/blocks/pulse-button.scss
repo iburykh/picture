@@ -11,7 +11,7 @@
 	position: fixed;
 	top: 40px;
 	right: 30px;
-	background: url('../img/promo/gift.png') center center/cover no-repeat;
+	background: url('../img/promo/gift.webp') center center/cover no-repeat;
 	z-index: 100;
 	&__rings {
 		border: 1px solid $main-color;
@@ -32,4 +32,8 @@
 			animation-name: pulse_2;
 		}
 	}
+}
+
+.no-webp .pulse-button {
+	background: url('../img/promo/gift.png') center center/cover no-repeat;
 }

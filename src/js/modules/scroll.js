@@ -1,33 +1,18 @@
 // scroll - добавить этот класс к ссылкам соскролом
+// в атрибуте href указывать название класса (после #), до которого прокручивать
 const smoothScroll = () => {
 	let links = document.querySelectorAll('.scroll');
-    let speed = 0.2;
 
 	links.forEach(link => {
 		link.addEventListener('click', function(event) {
 			event.preventDefault();
 
-			let widthTop = document.documentElement.scrollTop,
-			hash = this.getAttribute('href').replace('#', ''),
-			toBlock = document.querySelector('.' + hash).getBoundingClientRect().top,
-			start = null;
-	
-		requestAnimationFrame(step);
-	
-		function step(time) {
-			if (start === null) {
-				start = time;
-			}
-	
-			let progress = time - start,
-				r = (toBlock < 0 ? Math.max(widthTop - progress/speed, widthTop + toBlock) : Math.min(widthTop + progress/speed, widthTop + toBlock));
-	
-				document.documentElement.scrollTo(0, r);
-	
-			if (r != widthTop + toBlock) {
-				requestAnimationFrame(step);
-			}
-		}
+			let hash = this.getAttribute('href').replace('#', '');
+			let toBlock = document.querySelector('.' + hash);
+
+			zenscroll.to(toBlock);
+
+			// zenscroll.to(about, 500); // 500ms == время прокрутки
 		});
 	});
 };

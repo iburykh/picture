@@ -15,6 +15,7 @@ import popup from './modules/popup';
 import mask from './modules/mask_tel';
 import checkTextInputs from './modules/check_inputs';
 import smoothScroll from './modules/scroll';
+import lazyLoad from './modules/lazy';
 
 'use strict';
 
@@ -33,13 +34,17 @@ popup();
 mask();
 checkTextInputs();
 smoothScroll();
+lazyLoad();
+
+window.noZensmooth = true;
 
 //Up arrow
 
 const upElem = document.querySelector('.pageup');
 
 window.addEventListener('scroll', () => {
-	if (document.documentElement.scrollTop > 1300) {
+	let scrolled = window.pageYOffset || document.documentElement.scrollTop;
+	if (scrolled > 1300) {
 		upElem.classList.add('active');
 	} else {
 		upElem.classList.remove('active');
